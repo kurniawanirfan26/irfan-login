@@ -121,14 +121,15 @@ class auth extends CI_Controller
     private function _sendEmail($token, $type)
     {
         $config = [
-            'protocol' => 'smtp',
-            'smtp_host' => 'zmail.cac-office.com',
+            'protocol'  => 'smtp',
+            'smtp_host' => 'mail.cac-office.com',
             'smtp_port' => 25251,
             'smtp_user' => 'irfan@carmel.co.id',
             'smtp_pass' => 'bekasi95',
             'mailtype'  => 'html',
             'charset'   => 'iso-8859-1',
-            'newline'   => "\r\n"
+            'newline'   => "\r\n",
+            'wordwrap'  => TRUE
         ];
 
         $this->email->initialize($config);

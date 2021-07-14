@@ -30,3 +30,16 @@ $('.tombol-hapus').on('click', function (e) {
         }
     })
 });
+
+function change() {
+    var x = document.getElementById('password').type;
+
+    if (x == 'password') {
+        document.getElementById('password').type = 'text';
+        document.getElementById('mybutton').innerHTML = '<i class="far fa-eye"></i>';
+    }
+    else {
+        document.getElementById('password').type = 'password';
+        document.getElementById('mybutton').innerHTML = '<i class="fas fa-eye-slash"></i>';
+    }
+}
